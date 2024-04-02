@@ -28,7 +28,7 @@ var solution = [
     "654931782",
 ]
 
-window.onload = function() {
+window.onload = function () {
     setGame();
 }
 
@@ -48,16 +48,16 @@ function setGame() {
         for (let c = 0; c < 9; c++) {
             let tile = document.createElement("div");
             tile.id = r.toString() + "-" + c.toString();
-            if (grid[r][c] != "-"){
-                tile.innerText = grid[r][c];   
-                tile.classList.add("tile-start");         
+            if (grid[r][c] != "-") {
+                tile.innerText = grid[r][c];
+                tile.classList.add("tile-start");
             }
             if (r == 2 || r == 5) {
                 tile.classList.add("horizontal-line");
             }
             if (c == 2 || c == 5) {
                 tile.classList.add("vertical-line");
-            }                  
+            }
             tile.addEventListener("click", selectTile);
             tile.classList.add("tile");
             document.getElementById("grid").append(tile);
@@ -65,7 +65,7 @@ function setGame() {
     }
 }
 
-function selectNumber(){
+function selectNumber() {
     if (numSelected != null) {
         numSelected.classList.remove("number-selected");
     }
